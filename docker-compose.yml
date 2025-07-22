@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  local_ollama:
+#    build:
+#      context: .
+#      dockerfile: Dockerfile
+    image: azaddjan/ollama:latest
+    container_name: ollama_server
+    ports:
+      - "11500:11434"
+    restart: unless-stopped
+    entrypoint: ["ollama"]
+    command: ["serve"]
+
+  pgvector:
+    image: azaddjan/pgvector:latest
+    container_name: pgvector
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: vectordb
+    volumes:
+      - pgvector-data:/var/lib/postgresql/data
+    restart: unless-stopped
+
+volumes:
+  pgvector-data:

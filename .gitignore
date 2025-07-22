@@ -1,0 +1,65 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+*.log
+*.sqlite3
+*.db
+
+# Virtual Environments
+.venv/
+env/
+venv/
+pip-wheel-metadata/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# VSCode & IDEs
+.vscode/
+.idea/
+*.code-workspace
+
+# Docker
+*.pid
+*.seed
+*.bak
+*.swp
+docker-compose.override.yml
+.dockerignore
+Dockerfile~
+
+# Model & Data Files
+.ollama/
+ollama/
+models/
+data/
+
+# Postgres Volumes
+pgvector-data/
+*.sql~
+
+# Mac OS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Logs
+*.log
+logs/
+nohup.out
+
+# System Files
+Thumbs.db
+desktop.ini
+
+# Ignore compiled binaries or intermediate files
+*.so
+*.o
+*.out
+
+# Backup files
+*~
+*.bak
